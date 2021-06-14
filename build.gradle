@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.apache.beam/beam-sdks-java-core
+    implementation group: 'org.apache.beam', name: 'beam-sdks-java-core', version: '2.30.0'
+
+    // https://mvnrepository.com/artifact/org.apache.beam/beam-runners-direct-java
+    implementation group: 'org.apache.beam', name: 'beam-runners-direct-java', version: '2.30.0'
+
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+
+    // https://mvnrepository.com/artifact/org.apache.beam/beam-runners-spark
+    implementation group: 'org.apache.beam', name: 'beam-runners-spark', version: '2.30.0'
+
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+
+    // https://mvnrepository.com/artifact/org.apache.beam/beam-runners-direct-java
+    testImplementation group: 'org.apache.beam', name: 'beam-runners-direct-java', version: '2.30.0'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
